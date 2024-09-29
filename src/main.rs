@@ -1,11 +1,12 @@
-use crate::vec3::Vec3;
-
+use renderer::Renderer;
+use std::path::PathBuf;
+mod ray;
+mod renderer;
 mod vec3;
 
-mod ray;
-
-mod renderer;
-
 fn main() {
-    println!("Hello, world!");
+    let size = (400, 400);
+    let mut renderer = Renderer::new(size);
+    renderer.render();
+    renderer.output(renderer::Format::Ppm, PathBuf::from("out.ppm"));
 }

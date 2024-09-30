@@ -2,7 +2,6 @@ use renderer::Renderer;
 use std::path::PathBuf;
 mod ray;
 mod renderer;
-mod vec3;
 
 fn main() {
     let size = (400, 400);

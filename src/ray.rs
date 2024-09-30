@@ -1,14 +1,14 @@
-use crate::vec3::F64vec3;
+use glam::{self, DVec3};
 
 #[allow(dead_code)]
 struct Ray {
-    orig: F64vec3,
-    dir: F64vec3,
+    orig: DVec3,
+    dir: DVec3,
 }
 
 impl Ray {
     #[allow(dead_code)]
-    fn at(&self, t: f64) -> F64vec3 {
+    fn at(&self, t: f64) -> DVec3 {
         self.orig + self.dir * t
     }
 }
